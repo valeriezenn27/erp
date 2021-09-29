@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-stat [bgClass]="'success'" [icon]="'receipt'" [count]="1000" [label]="'Sales'"
+                [routerLink]="'/oauth/client'" [routerLinkActive]="'active'"></app-stat>
+        </div>
+
+        <div class="col">
+            <app-stat [bgClass]="'info'" [icon]="'inventory'" [count]="3400" [label]="'Purchase'"
+                [routerLink]="'/oauth/scope'" [routerLinkActive]="'active'"></app-stat>
+        </div>
+
+        <div class="col">
+            <app-stat [bgClass]="'primary'" [icon]="'paid'" [count]="2000" [label]="'Receivables'"
+                [routerLink]="'/oauth/claimsmapping'" [routerLinkActive]="'active'"></app-stat>
+        </div>
+
+        <div class="col">
+            <app-stat [bgClass]="'yellow'" [icon]="'payment'" [count]="500" [label]="'Payables'"
+                [routerLink]="'/oauth/audit'" [routerLinkActive]="'active'"></app-stat>
+        </div>
+        <div class="col">
+            <app-stat [bgClass]="'danger'" [icon]="'account_balance'" [count]="844" [label]="'Case/Banks'"
+                [routerLink]="'/oauth/consent'" [routerLinkActive]="'active'"></app-stat>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-card>
+                <mat-card-subtitle class="text-center">Top 6 Items Sales</mat-card-subtitle>
+                <mat-card-content class="text-center">
+                    <p>This card indeterminates progress bar.</p>
+                </mat-card-content>
+                <mat-card-footer class="text-center">Footer</mat-card-footer>
+            </mat-card>
+        </div>
+
+        <div class="col">
+            <mat-card>
+                <mat-card-subtitle class="text-center">Top 6 Items Sales</mat-card-subtitle>
+                <mat-card-content class="text-center">
+                    <p>This card indeterminates progress bar.</p>
+                </mat-card-content>
+                <mat-card-footer class="text-center">Footer</mat-card-footer>
+            </mat-card>
+        </div>
+
+        <div class="col">
+            <mat-card>
+                <mat-card-subtitle class="text-center">Top 6 Items Sales</mat-card-subtitle>
+                <mat-card-content class="text-center">
+                    <p>This card indeterminates progress bar.</p>
+                </mat-card-content>
+                <mat-card-footer class="text-center">Footer</mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
+</div>

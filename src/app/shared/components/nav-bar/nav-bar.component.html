@@ -1,0 +1,56 @@
+<mat-toolbar class="mat-elevation-z6" color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSidenav.emit()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <h6 class="ml-3" mat-icon-button>
+            <mat-icon class="mr-2" svgIcon="your_logo"></mat-icon>
+            {{title}}
+        </h6>
+
+        <!-- This fills the remaining space of the current row -->
+        <span class="navigation-fill-remaining-space"></span>
+
+        <mat-form-field appearance="standard" class="me-3">
+            <mat-label>LOCATION</mat-label>
+            <mat-select>
+                <mat-option>PHILIPPINES</mat-option>
+                <mat-option>SWITZERLAND</mat-option>
+                <mat-option>SPAIN</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="me-4">
+            <mat-label>FINANCIAL PERIOD</mat-label>
+            <mat-select>
+                <mat-option>Jan 1 - 30</mat-option>
+                <mat-option>Feb 1 - 27</mat-option>
+                <mat-option>Mar 1 - 31</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-icon-button aria-label="support icon">
+            <mat-icon>support_agent</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="notifications icon">
+            <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="refresh icon">
+            <mat-icon>autorenew</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="settings icon">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <span>Valerie Magbanua</span>
+        <button mat-icon-button [matTooltip]="currentUser" [matMenuTriggerFor]="auth">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #auth="matMenu">
+            <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Sign out</span>
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
