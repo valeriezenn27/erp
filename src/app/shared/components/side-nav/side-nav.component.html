@@ -1,46 +1,25 @@
-<mat-nav-list>
+<!-- <mat-nav-list>
     <h2 matSubheader> ERP PROTOTYPE </h2>
-    <mat-divider></mat-divider>
+    <mat-divider></mat-divider> -->
 
-    <!-- <a *ngFor="let item of menus" mat-list-item [matTooltip]="item.title" [routerLink]="item.route"
+<!-- <a *ngFor="let item of menus" mat-list-item [matTooltip]="item.title" [routerLink]="item.route"
         routerLinkActive="list-item-active" (click)="showSubMenu(item.title)">
         <mat-icon matListIcon class="nav-list-icon"> {{ item.icon }} </mat-icon>
-        <mat-icon class="menu-button" [ngClass]="{'rotated' : showOrderSubMenu}" *ngIf="isExpanded || isShowing">
-            expand_more
-        </mat-icon>
-        {{item.title}}
     </a> -->
 
-    <!-- <mat-list-item *ngFor="let item of menus" [matTooltip]="item.title" [routerLink]="item.route"
+<!-- <mat-list-item *ngFor="let item of menus" [matTooltip]="item.title" [routerLink]="item.route"
         routerLinkActive="list-item-active" (click)="showSubMenu(item.title)">
         <mat-icon matListIcon class="nav-list-icon"> {{ item.icon }} </mat-icon>
-        <mat-icon class="menu-button" [ngClass]="{'rotated' : showOrderSubMenu}" *ngIf="isExpanded || isShowing">
-            expand_more
-        </mat-icon>
         {{item.title}}
-
-        <div class="submenu" [ngClass]="{'expanded' : showOrderSubMenu}" *ngIf="isShowing || isExpanded">
-            <a mat-list-item href="...">Submenu Item 1</a>
-            <a mat-list-item href="...">Submenu Item 2</a>
-            <mat-list-item (click)="showOrderSubMenu = !showOrderSubMenu" class="parent">
-                <span class="full-width" *ngIf="isExpanded || isShowing">Nested Menu</span>
-                <mat-icon class="menu-button" [ngClass]="{'rotated' : showOrderSubMenu}"
-                    *ngIf="isExpanded || isShowing">
-                    expand_more</mat-icon>
-            </mat-list-item>
-        </div>
+        <mat-divider></mat-divider>
     </mat-list-item> -->
 
-    <!-- <mat-list-item matTooltip="Order" routerLinkActive="list-item-active" (click)="showSubMenu('Order')">
+<!-- <mat-list-item matTooltip="Order" routerLinkActive="list-item-active" (click)="showSubMenu('Order')">
         <mat-icon matListIcon class="nav-list-icon"> build </mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showOrderSubMenu}" *ngIf="isExpanded || isShowing">
             expand_more
         </mat-icon>
         Order
-        <div class="submenu" [ngClass]="{'expanded' : showOrderSubMenu}" *ngIf="isShowing || isExpanded">
-            <a mat-list-item href="...">Submenu Item 1</a>
-            <a mat-list-item href="...">Submenu Item 2</a>
-        </div>
     </mat-list-item>
 
     <mat-list-item matTooltip="Payroll" routerLinkActive="list-item-active" (click)="showSubMenu('Payroll')">
@@ -49,17 +28,9 @@
             expand_more
         </mat-icon>
         Payroll
-
-        <div class="submenu" [ngClass]="{'expanded' : showPayrollSubMenu}" *ngIf="isShowing || isExpanded">
-            <a mat-list-item href="...">Submenu Item 1</a>
-            <a mat-list-item href="...">Submenu Item 2</a>
-            <a mat-list-item href="...">Submenu Item 3</a>
-            <a mat-list-item href="...">Submenu Item 4</a>
-            <a mat-list-item href="...">Submenu Item 5</a>
-        </div>
     </mat-list-item> -->
 
-    <!-- <mat-list-item matTooltip="Procurement" routerLinkActive="list-item-active" (click)="showSubMenu('Procurement')">
+<!-- <mat-list-item matTooltip="Procurement" routerLinkActive="list-item-active" (click)="showSubMenu('Procurement')">
         <mat-icon matListIcon class="nav-list-icon"> inventory </mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showProcurementSubMenu}" *ngIf="isExpanded || isShowing">
             expand_more
@@ -67,78 +38,72 @@
         Procurement
     </mat-list-item> -->
 
+<!-- </mat-nav-list> -->
 
-    <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-        <mat-expansion-panel-header>
-            <mat-icon matListIcon class="nav-list-icon">inventory</mat-icon>Order
-        </mat-expansion-panel-header>
-        <mat-nav-list dense>
-            <a mat-list-item routerLink="#">
-                <mat-icon>inventory</mat-icon>Order - Submenu 1
-            </a>
-            <a mat-list-item routerLink="#">
-                <mat-icon>inventory</mat-icon>Order - Submenu 2
-            </a>
-        </mat-nav-list>
-    </mat-expansion-panel>
+<!-- <div class="container">
+    <div class="row">
+        <mat-list-item>
+            <button mat-icon-button>
+                <mat-icon>info</mat-icon>
+            </button>
+        </mat-list-item>
+        <span>Payroll</span>
+    </div>
 
-    <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-        <mat-expansion-panel-header>
-            <mat-icon matListIcon class="nav-list-icon">monetization_on</mat-icon>Payroll
-        </mat-expansion-panel-header>
-        <mat-nav-list dense>
-            <a mat-list-item routerLink="#">
-                <mat-icon>monetization_on</mat-icon>Payroll - Submenu 1
-            </a>
-            <a mat-list-item routerLink="#">
-                <mat-icon>monetization_on</mat-icon>Payroll - Submenu 2
-            </a>
-        </mat-nav-list>
-    </mat-expansion-panel>
+    <div class="row">
+        <mat-list-item>
+            <button mat-icon-button>
+                <mat-icon>info</mat-icon>
+            </button>
+        </mat-list-item>
+        <span>Procurement</span>
+    </div>
 
-    <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-        <mat-expansion-panel-header>
-            <mat-icon matListIcon class="nav-list-icon">inventory</mat-icon>Procurement
-        </mat-expansion-panel-header>
-        <mat-nav-list dense>
-            <a mat-list-item routerLink="#">
-                <mat-icon>inventory</mat-icon>Procurement - Submenu 1
-            </a>
-            <a mat-list-item routerLink="#">
-                <mat-icon>inventory</mat-icon>Procurement - Submenu 2
-            </a>
-        </mat-nav-list>
-    </mat-expansion-panel>
+</div> -->
 
-    <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-        <mat-expansion-panel-header>
-            <mat-icon matListIcon class="nav-list-icon">inventory</mat-icon>Production
-        </mat-expansion-panel-header>
-        <mat-nav-list dense>
-            <a mat-list-item routerLink="#">
-                <mat-icon>inventory</mat-icon>Production - Submenu 1
-            </a>
-            <a mat-list-item routerLink="#">
-                <mat-icon>inventory</mat-icon>Production - Submenu 2
-            </a>
-        </mat-nav-list>
-    </mat-expansion-panel>
 
-    <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-        <mat-expansion-panel-header>
-            <mat-icon matListIcon class="nav-list-icon">summarize</mat-icon>Reports
-        </mat-expansion-panel-header>
-        <mat-nav-list dense>
-            <a mat-list-item routerLink="#">
-                <mat-icon>summarize</mat-icon>Reports - Submenu 1
-            </a>
-            <a mat-list-item routerLink="#">
-                <mat-icon>summarize</mat-icon>Reports - Submenu 2
-            </a>
-            <a mat-list-item routerLink="#">
-                <mat-icon>summarize</mat-icon>Reports - Submenu 3
-            </a>
-        </mat-nav-list>
-    </mat-expansion-panel>
+<!-- <mat-nav-list>
+    <mat-list-item>
+        <button mat-icon-button matTooltip="Payroll">
+            <mat-icon>monetization_on</mat-icon>
+        </button>
+        Payroll
+    </mat-list-item>
+</mat-nav-list> -->
 
+<mat-nav-list class="list-container">
+    <a mat-list-item matTooltip="Payroll">
+        <span matLine class="icn_log">
+            <mat-icon>monetization_on</mat-icon>
+        </span>
+        <span matLine>PAYROLL</span>
+    </a>
+
+    <a mat-list-item matTooltip="ORDER">
+        <span matLine class="icn_log">
+            <mat-icon>list_alt</mat-icon>
+        </span>
+        <span matLine>ORDER</span>
+    </a>
+
+    <a mat-list-item matTooltip="PROCUREMENT">
+        <span matLine class="icn_log">
+            <mat-icon>storefront</mat-icon>
+        </span>
+        <span matLine>PROCUREMENT</span>
+    </a>
+
+    <a mat-list-item matTooltip="PRODUCTION">
+        <span matLine class="icn_log">
+            <mat-icon>inventory</mat-icon>
+        </span>
+        <span matLine>PRODUCTION</span>
+    </a>
+
+    <a mat-list-item matTooltip="REPORTS">
+        <span matLine class="icn_log">
+            <mat-icon>summarize</mat-icon>
+        </span>
+        <span matLine>REPORTS</span>
+    </a>
 </mat-nav-list>

@@ -11,7 +11,6 @@ a:active {
             color: #0f58a8;
         }
         display: block;
-        font-size: 0.75rem;
     }
 }
 
@@ -24,20 +23,32 @@ a:active {
     padding-left: 6px;
 }
 
-.menu-button {
-    transition: 300ms ease-in-out;
-    transform: rotate(0deg);
+.list-container {
+    width: 100%;
+    padding-top: 1px;
+    border-right: 1px solid;
+    border-color: #ddd;
+    text-align: center;
 }
-.menu-button.rotated {
-    transform: rotate(180deg);
+
+.list-container .mat-list-item {
+    border: 1px solid;
+    border-right: 0px;
+    border-color: #ddd;
+    margin-top: -1px;
+    height: 80px;
+
+    span {
+        font-size: 0.65rem;
+    }
 }
-.submenu {
-    overflow-y: hidden;
-    transition: transform 300ms ease;
-    transform: scaleY(0);
-    transform-origin: top;
-    padding-left: 30px;
+
+.list-container .mat-list-item .mat-line {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
-.submenu.expanded {
-    transform: scaleY(1);
+
+.icn_log {
+    width: 100%;
+    background-position: center;
 }
