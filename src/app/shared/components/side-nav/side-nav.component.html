@@ -1,109 +1,42 @@
-<!-- <mat-nav-list>
-    <h2 matSubheader> ERP PROTOTYPE </h2>
-    <mat-divider></mat-divider> -->
-
-<!-- <a *ngFor="let item of menus" mat-list-item [matTooltip]="item.title" [routerLink]="item.route"
-        routerLinkActive="list-item-active" (click)="showSubMenu(item.title)">
-        <mat-icon matListIcon class="nav-list-icon"> {{ item.icon }} </mat-icon>
-    </a> -->
-
-<!-- <mat-list-item *ngFor="let item of menus" [matTooltip]="item.title" [routerLink]="item.route"
-        routerLinkActive="list-item-active" (click)="showSubMenu(item.title)">
-        <mat-icon matListIcon class="nav-list-icon"> {{ item.icon }} </mat-icon>
-        {{item.title}}
-        <mat-divider></mat-divider>
-    </mat-list-item> -->
-
-<!-- <mat-list-item matTooltip="Order" routerLinkActive="list-item-active" (click)="showSubMenu('Order')">
-        <mat-icon matListIcon class="nav-list-icon"> build </mat-icon>
-        <mat-icon class="menu-button" [ngClass]="{'rotated' : showOrderSubMenu}" *ngIf="isExpanded || isShowing">
-            expand_more
-        </mat-icon>
-        Order
-    </mat-list-item>
-
-    <mat-list-item matTooltip="Payroll" routerLinkActive="list-item-active" (click)="showSubMenu('Payroll')">
-        <mat-icon matListIcon class="nav-list-icon"> monetization_on </mat-icon>
-        <mat-icon class="menu-button" [ngClass]="{'rotated' : showPayrollSubMenu}" *ngIf="isExpanded || isShowing">
-            expand_more
-        </mat-icon>
-        Payroll
-    </mat-list-item> -->
-
-<!-- <mat-list-item matTooltip="Procurement" routerLinkActive="list-item-active" (click)="showSubMenu('Procurement')">
-        <mat-icon matListIcon class="nav-list-icon"> inventory </mat-icon>
-        <mat-icon class="menu-button" [ngClass]="{'rotated' : showProcurementSubMenu}" *ngIf="isExpanded || isShowing">
-            expand_more
-        </mat-icon>
-        Procurement
-    </mat-list-item> -->
-
-<!-- </mat-nav-list> -->
-
-<!-- <div class="container">
-    <div class="row">
-        <mat-list-item>
-            <button mat-icon-button>
-                <mat-icon>info</mat-icon>
-            </button>
-        </mat-list-item>
-        <span>Payroll</span>
-    </div>
-
-    <div class="row">
-        <mat-list-item>
-            <button mat-icon-button>
-                <mat-icon>info</mat-icon>
-            </button>
-        </mat-list-item>
-        <span>Procurement</span>
-    </div>
-
-</div> -->
-
-
-<!-- <mat-nav-list>
-    <mat-list-item>
-        <button mat-icon-button matTooltip="Payroll">
+<ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <li class="nav-item">
+        <a href="#" class="nav-link" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="Home">
             <mat-icon>monetization_on</mat-icon>
-        </button>
-        Payroll
-    </mat-list-item>
-</mat-nav-list> -->
-
-<mat-nav-list class="list-container">
-    <a mat-list-item matTooltip="Payroll">
-        <span matLine class="icn_log">
-            <mat-icon>monetization_on</mat-icon>
-        </span>
-        <span matLine>PAYROLL</span>
-    </a>
-
-    <a mat-list-item matTooltip="ORDER">
-        <span matLine class="icn_log">
+        </a>
+        PAYROLL
+    </li>
+    <mat-divider></mat-divider>
+    <li>
+        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="Dashboard">
             <mat-icon>list_alt</mat-icon>
-        </span>
-        <span matLine>ORDER</span>
-    </a>
-
-    <a mat-list-item matTooltip="PROCUREMENT">
-        <span matLine class="icn_log">
+        </a>
+        ORDER
+    </li>
+    <mat-divider></mat-divider>
+    <li>
+        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="Orders">
             <mat-icon>storefront</mat-icon>
-        </span>
-        <span matLine>PROCUREMENT</span>
-    </a>
-
-    <a mat-list-item matTooltip="PRODUCTION">
-        <span matLine class="icn_log">
+        </a>
+        PROCUREMENT
+    </li>
+    <mat-divider></mat-divider>
+    <li>
+        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="Products">
             <mat-icon>inventory</mat-icon>
-        </span>
-        <span matLine>PRODUCTION</span>
-    </a>
-
-    <a mat-list-item matTooltip="REPORTS">
-        <span matLine class="icn_log">
+        </a>
+        PRODUCTION
+    </li>
+    <mat-divider></mat-divider>
+    <li>
+        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="Customers">
             <mat-icon>summarize</mat-icon>
-        </span>
-        <span matLine>REPORTS</span>
-    </a>
-</mat-nav-list>
+        </a>
+        REPORTS
+    </li>
+    <mat-divider></mat-divider>
+</ul>
