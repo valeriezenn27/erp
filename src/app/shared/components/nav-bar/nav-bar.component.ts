@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  title = 'ERP PROTOTYPE';
+  title = 'Customer Company Pvt. Ltd';
   currentUser: string = '';
 
   @Output() toggleSidenav = new EventEmitter<void>();

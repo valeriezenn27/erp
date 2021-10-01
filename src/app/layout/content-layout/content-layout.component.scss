@@ -8,16 +8,17 @@
     left: 0;
     right: 0;
     .sidenav-container {
-      flex: 1;
-      background: #fafafa;;
-      height: 100%;
-      .sidenav {
-        width: 100px;
-        background: #ffffff;
-      }
-      .main-container {
-        padding: 20px;
-      }
+        flex: 1;
+        background: #fafafa;
+        ;
+        height: 100%;
+        .sidenav {
+            width: 70px;
+            background: #0f58a8;
+            font-size: 11px;
+        }
+        .main-container {
+            padding: 20px;
+        }
     }
-  }
-  
+}

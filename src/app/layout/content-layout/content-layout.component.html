@@ -2,9 +2,7 @@
     <app-nav-bar (toggleSidenav)="navigationSidenav.toggle()"></app-nav-bar>
 
     <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav #navigationSidenav class="sidenav mat-elevation-z8"
-            [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [attr.role]="isHandset ? 'dialog' : 'navigation'"
-            [opened]="mobileQuery.matches ? false : true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+        <mat-sidenav #navigationSidenav class="sidenav mat-elevation-z8" [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [attr.role]="isHandset ? 'dialog' : 'navigation'" [opened]="mobileQuery.matches ? false : true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
             <app-side-nav [isExpanded]="expanded" [isShowing]="showing"></app-side-nav>
         </mat-sidenav>
         <mat-sidenav-content>

@@ -120,6 +120,7 @@
   },
   "defaultProject": "erp-prototype",
   "cli": {
+    "analytics": "025fc5ee-ef35-4703-b2ce-f9c9f7013ca0",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }
