@@ -1,3 +1,5 @@
+@import '~src/scss/variables';
+
 .mat-icon {
     height: 32px;
     width: 32px;
@@ -9,7 +11,7 @@ li {
 
 .nav-item,
 .nav-item .mat-icon {
-    color: #fff;
+    color: $white;
 }
 
 li.nav-item {

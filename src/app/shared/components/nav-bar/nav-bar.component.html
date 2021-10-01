@@ -4,7 +4,7 @@
             <mat-icon>menu</mat-icon>
         </button> -->
 
-        <div id="erp-logo">LOGO HERE</div>
+        <div class="toolbar-logo">LOGO HERE</div>
 
         <h6 class="ml-3" mat-icon-button>
             <mat-icon class="mr-2" svgIcon="your_logo"></mat-icon>
@@ -32,27 +32,31 @@
             </mat-select>
         </mat-form-field>
 
-        <button mat-icon-button aria-label="support icon">
-            <mat-icon>support_agent</mat-icon>
-        </button>
-        <button mat-icon-button aria-label="notifications icon">
-            <mat-icon>notifications</mat-icon>
-        </button>
-        <button mat-icon-button aria-label="refresh icon">
-            <mat-icon>autorenew</mat-icon>
-        </button>
-        <button mat-icon-button aria-label="settings icon">
-            <mat-icon>settings</mat-icon>
-        </button>
-        <div id="erp-user">Valerie Magbanua</div>
-        <button mat-icon-button [matTooltip]="currentUser" [matMenuTriggerFor]="auth">
-            <mat-icon>account_circle</mat-icon>
-        </button>
-        <mat-menu #auth="matMenu">
-            <button mat-menu-item>
-                <mat-icon>exit_to_app</mat-icon>
-                <span>Sign out</span>
+        <div class="toolbar-btn">
+            <button mat-icon-button aria-label="support icon">
+                <mat-icon>support_agent</mat-icon>
             </button>
-        </mat-menu>
+            <button mat-icon-button aria-label="notifications icon">
+                <mat-icon>notifications</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="refresh icon">
+                <mat-icon>autorenew</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="settings icon">
+                <mat-icon>settings</mat-icon>
+            </button>
+            <span class="toolbar-user">Valerie Magbanua</span>
+            <button mat-icon-button [matTooltip]="currentUser" [matMenuTriggerFor]="auth">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #auth="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Sign out</span>
+                </button>
+            </mat-menu>
+        </div>
+
+
     </mat-toolbar-row>
 </mat-toolbar>
