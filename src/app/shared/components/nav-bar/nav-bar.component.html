@@ -4,33 +4,39 @@
             <mat-icon>menu</mat-icon>
         </button> -->
 
-        <div class="toolbar-logo">LOGO HERE</div>
+        <div class="toolbar-logo"><img id="toolbar-logo-img" src="../../../../assets/logo2.png" alt="ERP LOGO" /></div>
 
         <h6 class="ml-3" mat-icon-button>
-            <mat-icon class="mr-2" svgIcon="your_logo"></mat-icon>
-            {{title}}
+            <!-- <mat-icon class="mr-2" svgIcon="your_logo"></mat-icon> -->
+            <button mat-icon-button id="toolbar-company-name">
+               {{title}}
+            </button>
         </h6>
 
         <!-- This fills the remaining space of the current row -->
         <span class="navigation-fill-remaining-space"></span>
 
-        <mat-form-field appearance="standard" class="me-3">
-            <mat-label>LOCATION</mat-label>
-            <mat-select>
-                <mat-option>PHILIPPINES</mat-option>
-                <mat-option>SWITZERLAND</mat-option>
-                <mat-option>SPAIN</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <div class="toolbar-select">
+            <span>LOCATION :</span>
+            <mat-form-field appearance="standard" class="me-3">
+                <mat-select>
+                    <mat-option>PHILIPPINES</mat-option>
+                    <mat-option>SWITZERLAND</mat-option>
+                    <mat-option>SPAIN</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
 
-        <mat-form-field appearance="standard" class="me-4">
-            <mat-label>FINANCIAL PERIOD</mat-label>
-            <mat-select>
-                <mat-option>Jan 1 - 30</mat-option>
-                <mat-option>Feb 1 - 27</mat-option>
-                <mat-option>Mar 1 - 31</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <div class="toolbar-select">
+            <span>FINANCIAL PERIOD :</span>
+            <mat-form-field appearance="standard" class="me-4">
+                <mat-select>
+                    <mat-option>Jan 1 - 30</mat-option>
+                    <mat-option>Feb 1 - 27</mat-option>
+                    <mat-option>Mar 1 - 31</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
 
         <div class="toolbar-btn">
             <button mat-icon-button aria-label="support icon">

@@ -1,4 +1,4 @@
-@import '~src/scss/variables';
+@import "~src/scss/variables";
 
 .layout-container {
     display: flex;
@@ -14,12 +14,106 @@
         background: $main-background-color;
         height: 100%;
         .sidenav {
-            width: 70px;
+            width: auto;
             background: $primary-color;
-            font-size: 11px;
+            overflow: hidden;
         }
         .main-container {
-            padding: 20px;
+            // padding: 20px;
         }
     }
+}
+
+.mat-drawer-inner-container {
+    overflow: hidden !important;
+    position: relative;
+    left: 0;
+}
+
+.mat-button,
+.mat-menu button {
+    font-size: 0.6rem;
+    line-height: 1;
+    color: #fff;
+    padding: 7px;
+}
+
+::ng-deep .customizeMenu {
+    background: #0f4371 !important;
+    right: 10;
+}
+
+::ng-deep .customizeMenu button {
+    color: #fff !important;
+    font-size: 0.7rem !important;
+    line-height: 1 !important;
+}
+
+.mat-button:hover {
+    background-color: #b1b1b8;
+}
+
+::ng-deep .mat-tab-label{
+    background-color: gray;
+    color: #fff;
+}
+
+::ng-deep .mat-tab-label-active{
+    background-color: #0f4371;
+    color: #fff;
+}
+
+::ng-deep .mat-tab-labels{
+    height: 30px;
+}
+
+::ng-deep .mat-tab-label{
+    margin: 0;
+    padding: 0;
+    height: 30px !important;
+    font-size: 12px;
+}
+
+.close-tab-icon{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.tab-active-name{
+    padding: 8px;
+    background-color: #0f4371;
+    color: #fff;
+}
+
+.tab-content-body {
+    border: solid 1px #0f4371;
+    margin: 5px;
+}
+
+.tab-content-body-inner {
+    border: solid 1px #0f4371;
+    margin: 3px;
+    height: 525px;
+}
+
+::ng-deep .mat-tab-body-wrapper {
+    height: 100%;
+}
+
+::ng-deep .mat-tab-body.mat-tab-body-active {
+    height: 100%;
+}
+
+.footer {
+    background: #0f4371;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+}
+
+.footer p {
+    width: 100%;
+    text-align: center;
 }

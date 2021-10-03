@@ -1,31 +1,49 @@
-@import '~src/scss/variables';
+@import "~src/scss/variables";
 
 .mat-icon {
     height: 32px;
     width: 32px;
 }
 
-li {
-    font-size: 0.75rem;
-}
+// li {
+//     font-size: 0.75rem;
+// }
 
 .nav-item,
 .nav-item .mat-icon {
     color: $white;
 }
 
+.mat-button,
+.mat-menu button {
+    font-size: 0.6rem;
+    line-height: 1;
+    color: #fff;
+    padding: 7px;
+}
+
+::ng-deep .customizeMenu{
+    background: #0f4371 !important;
+}
+
+::ng-deep .customizeMenu button{
+    background: #0f4371 !important;
+    color: #fff !important;
+    font-size: 0.6rem !important;
+    line-height: 1 !important;
+}
+
 li.nav-item {
     font-size: 9px;
     margin-top: 2px;
     margin-bottom: 2px;
-    display: contents;
+}
+
+.mat-button:hover {
+    background-color: #b1b1b8;
 }
 
 .nav-link {
     margin: 0;
     padding: 5px 0 0 0;
-}
-
-.mat-divider {
-    border-bottom: solid 1px #000;
 }

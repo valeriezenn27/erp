@@ -1,59 +1,78 @@
 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-    <li class="nav-item">
-        <a href="#" class="nav-link" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
-            <mat-icon>monetization_on</mat-icon>
-        </a>
-        ADMIN <br> CONTROL
-    </li>
+    <button mat-button [matMenuTriggerFor]="adminControlMenu">
+        <mat-icon>monetization_on</mat-icon><br>ADMIN <br> CONTROL
+    </button>
+    <mat-menu #adminControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item [matMenuTriggerFor]="userManagement">User Management</button>
+        <button mat-menu-item [matMenuTriggerFor]="itemMaster">Item Master</button>
+    </mat-menu>
+    <mat-menu #userManagement="matMenu" class="customizeMenu">
+        <button mat-menu-item>User Master</button>
+        <button mat-menu-item>User Security Class</button>
+    </mat-menu>
+    <mat-menu #itemMaster="matMenu" class="customizeMenu">
+        <button mat-menu-item>Item Control Master</button>
+        <button mat-menu-item>Fabric Master</button>
+        <button mat-menu-item>Accesories Master</button>
+        <button mat-menu-item>Other Master</button>
+    </mat-menu>
     <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
-            <mat-icon>monetization_on</mat-icon>
-        </a>
-        MASTERS
-    </li>
-    <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
-            <mat-icon>monetization_on</mat-icon>
-        </a>
+
+    <button mat-button [matMenuTriggerFor]="samplingControlMenu">
+        <mat-icon>monetization_on</mat-icon> <br>
         SAMPLING
-    </li>
+    </button>
+    <mat-menu #samplingControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
-            <mat-icon>list_alt</mat-icon>
-        </a>
-        ORDER
-    </li>
+
+    <button mat-button [matMenuTriggerFor]="orderControlMenu">
+        <mat-icon>monetization_on</mat-icon> <br>ORDER
+    </button>
+    <mat-menu #orderControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
-            <mat-icon>storefront</mat-icon>
-        </a>
-        PROCUREMENT<br> &
-        <br> INVENTORY
-    </li>
+
+    <button mat-button [matMenuTriggerFor]="procurementControlMenu">
+        <mat-icon>storefront</mat-icon><br>PROCUREMENT
+    </button>
+    <mat-menu #procurementControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
-            <mat-icon>inventory</mat-icon>
-        </a>
-        PRODUCTION
-    </li>
+
+
+    <button mat-button [matMenuTriggerFor]="productionControlMenu">
+        <mat-icon>inventory</mat-icon><br>PRODUCTION
+    </button>
+    <mat-menu #productionControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
-            <mat-icon>summarize</mat-icon>
-        </a>
-        EXPORT DOC
-    </li>
+
+
+    <button mat-button [matMenuTriggerFor]="exportControlMenu">
+        <mat-icon>summarize</mat-icon><br>EXPORT DOC
+    </button>
+    <mat-menu #exportControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <mat-divider></mat-divider>
-    <li class="nav-item">
-        <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
-            <mat-icon>summarize</mat-icon>
-        </a>
-        REPORTS
-    </li>
+
+
+    <button mat-button [matMenuTriggerFor]="reportsControlMenu">
+        <mat-icon>summarize</mat-icon><br>REPORTS
+    </button>
+    <mat-menu #reportsControlMenu="matMenu" class="customizeMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <mat-divider></mat-divider>
 </ul>

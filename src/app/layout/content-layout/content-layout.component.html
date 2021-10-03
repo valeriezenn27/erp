@@ -2,14 +2,112 @@
     <app-nav-bar (toggleSidenav)="navigationSidenav.toggle()"></app-nav-bar>
 
     <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav #navigationSidenav class="sidenav mat-elevation-z8" [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [attr.role]="isHandset ? 'dialog' : 'navigation'" [opened]="mobileQuery.matches ? false : true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
-            <app-side-nav [isExpanded]="expanded" [isShowing]="showing"></app-side-nav>
+        <mat-sidenav #navigationSidenav class="sidenav mat-elevation-z8"
+            [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [attr.role]="isHandset ? 'dialog' : 'navigation'"
+            [opened]="mobileQuery.matches ? false : true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+            <!-- <app-side-nav [isExpanded]="expanded" [isShowing]="showing"></app-side-nav> -->
+
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <button mat-button [matMenuTriggerFor]="adminControlMenu">
+                    <mat-icon>monetization_on</mat-icon><br>ADMIN <br> CONTROL
+                </button>
+                <mat-menu #adminControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item [matMenuTriggerFor]="userManagement">User Management</button>
+                    <button mat-menu-item [matMenuTriggerFor]="itemMaster">Item Master</button>
+                </mat-menu>
+                <mat-menu #userManagement="matMenu" class="customizeMenu">
+                    <button mat-menu-item (click)="addTab('User Master')">User Master</button>
+                    <button mat-menu-item (click)="addTab('User Security Class')">User Security Class</button>
+                </mat-menu>
+                <mat-menu #itemMaster="matMenu" class="customizeMenu">
+                    <button mat-menu-item (click)="addTab('Item Control Master')">Item Control Master</button>
+                    <button mat-menu-item (click)="addTab('Fabric Master')">Fabric Master</button>
+                    <button mat-menu-item (click)="addTab('Accesories Master')">Accesories Master</button>
+                    <button mat-menu-item (click)="addTab('Other Master')">Other Master</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+
+                <button mat-button [matMenuTriggerFor]="samplingControlMenu">
+                    <mat-icon>monetization_on</mat-icon> <br>
+                    SAMPLING
+                </button>
+                <mat-menu #samplingControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item (click)="addTab('SAMPLING Item 1')">Item 1</button>
+                    <button mat-menu-item (click)="addTab('SAMPLING Item 2')">Item 2</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+
+                <button mat-button [matMenuTriggerFor]="orderControlMenu">
+                    <mat-icon>monetization_on</mat-icon> <br>ORDER
+                </button>
+                <mat-menu #orderControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item (click)="addTab('ORDER Item 1')">Item 1</button>
+                    <button mat-menu-item (click)="addTab('ORDER Item 2')">Item 2</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+
+                <button mat-button [matMenuTriggerFor]="procurementControlMenu">
+                    <mat-icon>storefront</mat-icon><br>PROCUREMENT
+                </button>
+                <mat-menu #procurementControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item (click)="addTab('PROCUREMENT Item 1')">Item 1</button>
+                    <button mat-menu-item (click)="addTab('PROCUREMENT Item 2')">Item 2</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+
+
+                <button mat-button [matMenuTriggerFor]="productionControlMenu">
+                    <mat-icon>inventory</mat-icon><br>PRODUCTION
+                </button>
+                <mat-menu #productionControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item (click)="addTab('PRODUCTION Item 1')">Item 1</button>
+                    <button mat-menu-item (click)="addTab('PRODUCTION Item 2')">Item 2</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+
+
+                <button mat-button [matMenuTriggerFor]="exportControlMenu">
+                    <mat-icon>summarize</mat-icon><br>EXPORT DOC
+                </button>
+                <mat-menu #exportControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item (click)="addTab('EXPORT DOC Item 1')">Item 1</button>
+                    <button mat-menu-item (click)="addTab('EXPORT DOC Item 2')">Item 2</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+
+
+                <button mat-button [matMenuTriggerFor]="reportsControlMenu">
+                    <mat-icon>summarize</mat-icon><br>REPORTS
+                </button>
+                <mat-menu #reportsControlMenu="matMenu" class="customizeMenu" xPosition="after">
+                    <button mat-menu-item (click)="addTab('REPORTS Item 1')">Item 1</button>
+                    <button mat-menu-item (click)="addTab('REPORTS Item 2')">Item 2</button>
+                </mat-menu>
+                <mat-divider></mat-divider>
+            </ul>
         </mat-sidenav>
         <mat-sidenav-content>
             <main class="main-container">
-                <router-outlet></router-outlet>
+                <!-- <router-outlet></router-outlet> -->
+                <mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)" dynamicHeight>
+                    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+                        <ng-template mat-tab-label>
+                            {{tab}}
+                            <mat-icon class="close-tab-icon" (click)="removeTab(index)">close</mat-icon>
+                        </ng-template>
+                        <div class="tab-active-name">{{tab}}</div>
+                        <div class="tab-content-body mat-elevation-z4">
+                            <div class="tab-content-body-inner">
+                                Contents for {{tab}} tab
+                            </div>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
             </main>
         </mat-sidenav-content>
     </mat-sidenav-container>
-    <!-- <app-footer></app-footer> -->
+
+    <footer class="footer">
+        <p>© 2022 Our Erp Name. All rights reserved.</p>
+    </footer>
 </div>
