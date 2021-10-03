@@ -1,14 +1,21 @@
-<div class="mfa-container">
-    <h1>VACCENTURE REGISTRATION PORTAL</h1>
-    <div class="mfa-container-inner">
-        <div class="mfa-container-inner-label">MULTI-FACTOR AUTHENTICATION</div>
-        <br>
+<div class="login-container">
+    <div class="login-logo">
+        <img id="logo-img" src="../../../../assets/logo.png" alt="ERP LOGO" />
+    </div>
+    <div class="login-container-inner">
+        <div class="login-container-inner-label">LOGIN</div>
         <mat-form-field class="full-width" appearance="fill">
-            <!-- <mat-label></mat-label> -->
-            <input matInput placeholder="Enter MFA Key" type="password">
-            <span class="error">Incorrect MFA key.</span>
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" type="text">
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" type="password">
         </mat-form-field>
         <br><br><br>
-        <button class="submit-btn" mat-raised-button mat-button color="primary">Verify</button>
+        <button class="submit-btn" mat-raised-button mat-button color="primary">Login</button>
     </div>
 </div>
+<footer class="footer">
+    <p>© 2022 Our Erp Name. All rights reserved.</p>
+</footer>
